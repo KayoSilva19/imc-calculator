@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --color-white: #FFF;
+  --color-blue-dark: #040924;
+  --color-blue-dark-300: #0C3440;
+  --color-blue-medium: #02799D;
+  --color-green: #00453A;
+  --color-red-medium: #F03E3E;
+
+  font-size: 62.5%;
+}
+
+body, input, button {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--color-blue-dark);
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+
+  place-content: center;
+}
+
+.container .card {
+  padding: 4.8rem 6.4rem 6.4rem;
+  background-color: var(--color-white);
+  max-width: 42.8rem;
+  margin-inline: auto;
+  margin-bottom: 12rem;
+}
