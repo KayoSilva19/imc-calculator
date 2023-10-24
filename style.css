@@ -190,5 +190,5 @@ form button:hover {
   opacity: 0;
   visibility: hidden;
 
-  transition: transform .5s;
+  transition: all .5s;
 }
