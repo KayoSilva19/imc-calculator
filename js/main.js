@@ -11,7 +11,7 @@ form.onsubmit = function (e) {
 
   const result = calculateIMC(weight, height)
   Modal.editMessage(result)
-  Modal.showModal()
+  Modal.show()
 }
 
 function calculateIMC(weight, height) {

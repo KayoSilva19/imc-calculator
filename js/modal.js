@@ -11,18 +11,26 @@ export const Modal = {
     const messageModal = `Seu IMC é ${imcResult}` 
     Modal.message.innerText = messageModal
   },
-  showModal() {   
+  show() {   
     Modal.wrapper.classList.add('open')
   },
-  closeModal() {
+  close() {
     Modal.wrapper.classList.remove('open')
     handleReset()
   }
 }
 
-Modal.btnClose.addEventListener('click', Modal.closeModal)
+Modal.btnClose.addEventListener('click', Modal.close)
 
 function handleReset() {
   inputWeight.value = ''
   inputHeight.value = ''
+}
+
+window.addEventListener('keydown', handleKeyDown)
+
+function handleKeyDown(event) {
+  if(event.key === 'Escape') {
+    Modal.close()
+  }
 }
