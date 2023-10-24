@@ -9,9 +9,20 @@ form.onsubmit = function (e) {
   const weight = inputWeight.value
   const height = inputHeight.value
 
+  const showAlertError = notIsNumber(weight) || notIsNumber(height)
+
+  if (showAlertError) {
+     alert(`erro`)
+     return
+  }
+
   const result = calculateIMC(weight, height)
   Modal.editMessage(result)
   Modal.show()
+}
+
+function notIsNumber(value) {
+  return isNaN(value) || value === ''
 }
 
 function calculateIMC(weight, height) {
